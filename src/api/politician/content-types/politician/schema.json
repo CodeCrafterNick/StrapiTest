@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "politicians",
+  "info": {
+    "singularName": "politician",
+    "pluralName": "politicians",
+    "displayName": "Politicians",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "Offices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "politician-info.offices-held"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "wikipedia": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "facebook": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "twitter": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "instagram": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "website": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "In Office",
+        "Retired",
+        "Deceased",
+        "Running"
+      ]
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "died": {
+      "type": "date"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "us_state": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::us-state.us-state"
+    },
+    "party": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::party.party"
+    },
+    "quotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quote.quote",
+      "mappedBy": "politician"
+    },
+    "showMiddleName": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

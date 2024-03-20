@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submissions",
+  "info": {
+    "singularName": "submission",
+    "pluralName": "submissions",
+    "displayName": "Submissions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "politician": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::politician.politician"
+    },
+    "date": {
+      "type": "date"
+    },
+    "citation": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "context": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "approve": {
+      "type": "enumeration",
+      "enum": [
+        "Approved",
+        "Rejected",
+        "Pending"
+      ],
+      "default": "Pending"
+    }
+  }
+}
