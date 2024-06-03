@@ -31,7 +31,7 @@
     "strapi-plugin-publisher": "^1.5.7",
     "strapi-plugin-sitemap": "^3.0.8",
     "strapi-plugin-slugify": "^2.3.8",
-    "strapi-provider-cloudflare-r2": "^0.2.5",
+    "strapi-provider-cloudflare-r2": "^0.3.0",
     "strapi-provider-email-resend": "^1.0.4",
     "strapi-provider-upload-cloudflare-2": "^0.1.4"
   },
