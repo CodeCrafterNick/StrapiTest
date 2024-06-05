@@ -21,7 +21,7 @@
     "@strapi/provider-email-nodemailer": "^4.20.1",
     "@strapi/provider-upload-cloudinary": "4.17.1",
     "@strapi/strapi": "4.17.1",
-    "pg": "8.11.3",
+    "pg": "8.12.0",
     "strapi-advanced-uuid": "^1.2.0",
     "strapi-plugin-duplicate-button": "^1.1.14",
     "strapi-plugin-ezforms": "^0.1.7",
